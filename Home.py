@@ -20,7 +20,7 @@ sl.text_input(label="Enter a new task: ", placeholder="Add a new task...",
 sl.write("Check to complete a task")
 sl.write("Your pending tasks:")
 for index, todo in enumerate(todos):
-    checkbox = sl.checkbox(todo.title(), key=todo)
+    checkbox = sl.checkbox(todo.capitalize(), key=todo)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
