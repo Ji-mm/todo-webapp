@@ -11,7 +11,7 @@ def add_todo():
 
 
 sl.set_page_config(layout="wide")
-sl.title("Task Manager")
+sl.title("My Todo App")
 sl.subheader("This is My-Todo App.")
 sl.write("<b>This app is designed to help you increase your productivity.</b>", unsafe_allow_html=True)
 
