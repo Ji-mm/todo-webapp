@@ -1,15 +1,18 @@
 import streamlit as sl
 import functions
 
+# Access file
 todos = functions.get_todos()
 
 
+# Add a new item
 def add_todo():
     todo = sl.session_state["new_todos"] + "\n"
     todos.append(todo)
     functions.write_todos(todos)
 
 
+# Set page elements
 sl.set_page_config(layout="wide")
 sl.title("My Todo App")
 sl.subheader("This is My-Todo App.")
@@ -26,5 +29,3 @@ for index, todo in enumerate(todos):
         functions.write_todos(todos)
         del sl.session_state[todo]
         sl.experimental_rerun()
-
-
